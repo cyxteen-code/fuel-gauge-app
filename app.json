@@ -4,9 +4,37 @@
     "slug": "fuel-gauge-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "assetBundlePatterns": ["**/*"],
-    "ios": { "supportsTablet": true },
-    "android": { "adaptiveIcon": { "foregroundImage": "./assets/adaptive-icon.png", "backgroundColor": "#000000" } },
-    "web": { "bundler": "metro" }
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow Fuel Gauge to use the camera to capture gauge readings.",
+        "NSMicrophoneUsageDescription": "Allow Fuel Gauge to access the microphone while recording video clips."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "Allow Fuel Gauge to use the camera to capture gauge readings.",
+          "microphonePermissionText": "Allow Fuel Gauge to use the microphone while recording video clips."
+        }
+      ],
+      "expo-font"
+    ]
   }
 }
