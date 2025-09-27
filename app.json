@@ -34,7 +34,8 @@
           "microphonePermissionText": "Allow Fuel Gauge to use the microphone while recording video clips."
         }
       ],
-      "expo-font"
+      "expo-font",
+      "expo-web-browser"
     ]
   }
 }
